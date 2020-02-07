@@ -10,98 +10,108 @@
 </head>
 
 <body>
-    <h1>Trivia</h1>
-    <div id="divIngreseNombre" class="mostrarDiv">
-        <p>
-            <label>Nombre</label>
-            <input type="text" name="txtName" placeholder="Ingrese su nombre" id="txtName" />
-        </p>
-        <p>
-            <input type="button" name="btnJugar" value="Jugar" id="btnJugar" onclick="aceptarNombre()" />
-        </p>
+    <div id="divTrivia">
+        <h1> Bienvenido </h1>
+        <div id="divIngresaNombre">
+            <label id="lblIngreseNombre">Ingrese su nombre : </label>
+            <input type="text" id="txtNombre" placeholder="Escribe tu nombre"></input>
+            <p>
+                <input type="button" id="btnAceptarNombre" value="Aceptar" class="buttonInicio" onclick="aceptarNombre()" />
+            </p>
+        </div>
     </div>
 
     <div id="divSeleccioneTema" class="ocultarDiv">
+        <h1>
+            <label id="lblSaludaNombre" class="buttonHola"></label>
+        </h1>
+        <label>Escoge un tema</label>
         <p>
-            <label id="lblSaludaNombre"></label>
-        </p>
-        <p>
-            <label>Seleccione Tema</label>
-            <input type="radio" name="rdbTema" value="Tema1" onclick="SeleccioneTema1()" /><label>Cultura</label>
-            <input type="radio" name="rdbTema" value="Tema2" onclick="SeleccioneTema2()" /><label>Musica</label>
+            <ul>
+                <p>
+                    <li>
+                        <input type="button" id="btnTema1" value="Cultura General" class="button" onclick="selectTema1()" />
+                    </li>
+                </p>
+                <p>
+                    <li>
+                        <input type="button" id="btnTema2" value="Música" class="button" onclick="selectTema2()" />
+                    </li>
+                </p>
+            </ul>
         </p>
     </div>
 
-    <div id="divCultura" class="ocultarDiv">
-        <label>Cultura General</label>
-        <div id="divCulturaPregunta1" class="ocultarDiv">
-            <label>¿Cúal es el lugar más frío del mundo?</label>
-            <input type="radio" name="rdbPregunta1" value="Antartida" onclick="RespondiendoPregunta1()" />
-            <label>Antártida</label>
-            <input type="radio" name="rdbPregunta1" value="Canada" onclick="RespondiendoPregunta1()" />
-            <label>Canadá</label>
-            <input type="radio" name="rdbPregunta1" value="Siberia" onclick="RespondiendoPregunta1()" />
-            <label>Siberia</label>
+
+    <div id="divCulturaGeneral" class="ocultarDiv">
+        <h1>Cultura General</h1>
+
+        <div id="divPregunta1">
+            <h2>¿Cuál es el lugar más frio de la tierra?</h2>
+            <br />
+            <input type="button" id="btnRespuesta1" value="Antártida" class="button" onclick="responderPregunta1('Antártida')" />
+            <input type="button" id="btnRespuesta2" value="Canadá" class="button" onclick="responderPregunta1('Canadá')" />
+            <input type="button" id="btnRespuesta3" value="Siberia" class="button" onclick="responderPregunta1('Siberia')" />
         </div>
-        <div id="divCulturaPregunta2" class="ocultarDiv">
-            <label>¿Cúal es el río más largo del mundo?</label>
-            <input type="radio" name="rdbPregunta2" value="Nilo" onclick="RespondiendoPregunta2()" />
-            <label>Nilo</label>
-            <input type="radio" name="rdbPregunta2" value="Amazonas" onclick="RespondiendoPregunta2()" />
-            <label>Amazonas</label>
-            <input type="radio" name="rdbPregunta2" value="Misisipi" onclick="RespondiendoPregunta2()" />
-            <label>Misisipi</label>
+
+        <div id="divPregunta2" class="ocultarDiv">
+            <h2>¿Cúal es el río mas largo?</h2>
+            <br />
+            <input type="button" id="btnRespuesta4" value="Nilo" class="button" onclick="responderPregunta2('Nilo')" />
+            <input type="button" id="btnRespuesta5" value="Amazonas" class="button" onclick="responderPregunta2('Amazonas')" />
+            <input type="button" id="btnRespuesta6" value="Misisipi" class="button" onclick="responderPregunta2('Misisipi')" />
         </div>
-        <div id="divCulturaPregunta3" class="ocultarDiv">
-            <label>¿Cúal es el tercer planeta del sistema solar?</label>
-            <input type="radio" name="rdbPregunta3" value="Tierra" onclick="RespondiendoPregunta3()" />
-            <label>Tierra</label>
-            <input type="radio" name="rdbPregunta3" value="Jupiter" onclick="RespondiendoPregunta3()" />
-            <label>Júpiter</label>
-            <input type="radio" name="rdbPregunta3" value="Marte" onclick="RespondiendoPregunta3()" />
-            <label>Marte</label>
+
+        <div id="divPregunta3" class="ocultarDiv">
+            <h2>¿Cúal es el tercer planeta del sistema solar ?</h2>
+            <br />
+            <input type="button" id="btnRespuesta7" value="Marte" class="button" onclick="responderPregunta3('Marte')" />
+            <input type="button" id="btnRespuesta8" value="Jupiter" class="button" onclick="responderPregunta3('Jupiter')" />
+            <input type="button" id="btnRespuesta9" value="Tierra" class="button" onclick="responderPregunta3('Tierra')" />
         </div>
     </div>
 
     <div id="divMusica" class="ocultarDiv">
-        <label>Música</label>
-        <div id="divMusicaPregunta1" class="ocultarDiv">
-            <label>¿Quién interpreta Con Calma</label>
-            <input type="radio" name="rdbPregunta4" value="Selene" onclick="RespondiendoPregunta4()" />
-            <label>Selene</label>
-            <input type="radio" name="rdbPregunta4" value="DaddyYankee" onclick="RespondiendoPregunta4()" />
-            <label>Daddy Yankee<label>
-                    <input type="radio" name="rdbPregunta4" value="DonOmar" onclick="RespondiendoPregunta4()" />
-                    <label>Don Omar</label>
+        <h1>Música</h1>
+
+        <div id="divPregunta4">
+            <h2>¿Quién interpretó "I Will Always Love You", en la película el Guarda espaldas?</h2>
+            <br />
+            <input type="button" id="btnRespuesta10" value="Whitney Houston" class="button" onclick="responderPregunta4('Whitney Houston')" />
+            <input type="button" id="btnRespuesta11" value="Adele" class="button" onclick="responderPregunta4('Adele')" />
+            <input type="button" id="btnRespuesta12" value="Madonna" class="button" onclick="responderPregunta4('Madonna')" />
         </div>
 
-        <div id="divMusicaPregunta2" class="ocultarDiv">
-            <label>¿Cúal es el hit del verano?</label>
-            <input type="radio" name="rdbPregunta5" value="LaFaldita" onclick="RespondiendoPregunta5()" /> <label>La
-                Faldita</label>
-            <input type="radio" name="rdbPregunta5" value="Bebecita" onclick="RespondiendoPregunta5()" />
-            <label>Bebecita</label>
-            <input type="radio" name="rdbPregunta5" value="TiraPaLante" onclick="RespondiendoPregunta5()" /> <label>Tira
-                Pa Lante</label>
+        <div id="divPregunta5" class="ocultarDiv">
+            <h2>¿Quién interpretó el tema principal, en la película Titanic?</h2>
+            <br />
+            <input type="button" id="btnRespuesta13" value="Aretha Franklin" class="button" onclick="responderPregunta5('Aretha Franklin')" />
+            <input type="button" id="btnRespuesta14" value="Céline Dion" class="button" onclick="responderPregunta5('Céline Dion')" />
+            <input type="button" id="btnRespuesta15" value="Whitney Houston" class="button" onclick="responderPregunta5('Whitney Houston')" />
         </div>
-        <div id="divMusicaPregunta3" class="ocultarDiv">
-            <label>¿Cúal es el género más escuchado?</label>
-            <input type="radio" name="rdbPregunta6" value="Salsa" onclick="RespondiendoPregunta6()" />
-            <label>Salsa</label>
-            <input type="radio" name="rdbPregunta6" value="Reguetone" onclick="RespondiendoPregunta6()" />
-            <label>Reguetone</label>
-            <input type="radio" name="rdbPregunta6" value="Merengue" onclick="RespondiendoPregunta6()" />
-            <label>Merengue</label>
+
+        <div id="divPregunta6" class="ocultarDiv">
+            <h2>¿De quién es Rolling in the Deep?</h2>
+            <br />
+            <input type="button" id="btnRespuesta16" value="Janis Joplin" class="button" onclick="responderPregunta6('Janis Joplin')" />
+            <input type="button" id="btnRespuesta17" value="Nina Simone" class="button" onclick="responderPregunta6('Nina Simone')" />
+            <input type="button" id="btnRespuesta18" value="Adele" class="button" onclick="responderPregunta6('Adele')" />
         </div>
+
     </div>
 
     <div id="divResultado" class="ocultarDiv">
-        <h1><label id="lblResultado"></label></h1>
-
-        <input type="button" name="btnVolverAlMenu" value="Volver al Menu" id="btnVolverAlMenu" onclick="VolverAlMenu()" />
+        <h1>Tu resultado es</h1>
+        <h2>
+            <label id="lblResultado"></label>
+        </h2>
+        <p>
+            <input type="button" id="btnVolverMenuPrincipal" value="Volver al menú principal" class="buttonVolver" onclick="volverMenuPrincipal()" />
+        </p>
     </div>
+    <script type="text/javascript" src="app.js">
+    </script>
 
-    <script type="text/javascript " src="app.js "></script>
 </body>
 
 </html>

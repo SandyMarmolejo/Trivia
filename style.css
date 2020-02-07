@@ -1,11 +1,71 @@
- body {
-     background-color: aquamarine;
- }
- 
- .mostrarDiv {
-     display: block;
- }
- 
- .ocultarDiv {
-     display: none;
- }
+body {
+    font-family: sans-serif;
+    background-image: url('monstruocute.png');
+}
+
+#lblIngreseNombre {
+    font-weight: bold;
+    color: rgb(0, 26, 255);
+    padding: 8px;
+    font-size: 14pt;
+}
+
+#lblResultado {
+    font-weight: bold;
+    color: rgb(0, 26, 255);
+    font-size: 42pt;
+}
+
+.button {
+    margin: 5px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid;
+    background: #ccc;
+    padding: 10px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.buttonVolver {
+    margin: 5px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid;
+    background: #ccc;
+    padding: 10px;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.buttonInicio {
+    margin: 5px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid;
+    background: #ccc;
+    padding: 10px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.buttonHola {
+    font-weight: bold;
+    color: rgb(0, 26, 255);
+    font-size: 30pt;
+}
+
+.ocultarDiv {
+    display: none;
+}
+
+.mostrarDiv {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
