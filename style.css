@@ -1,0 +1,11 @@
+ body {
+     background-color: aquamarine;
+ }
+ 
+ .mostrarDiv {
+     display: block;
+ }
+ 
+ .ocultarDiv {
+     display: none;
+ }
